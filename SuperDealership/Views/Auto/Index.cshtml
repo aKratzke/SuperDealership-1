@@ -76,6 +76,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.VIN)
         </td>
+        <td><img src="@Html.DisplayFor(modelItem => item.CarImg)" /></td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.UserID }) |
             @Html.ActionLink("Details", "Details", new { id=item.UserID }) |

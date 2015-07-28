@@ -24,12 +24,12 @@ namespace SuperDealership.Controllers
         {
             return View(db.Vehicle.ToList());
         }
-          
+
 
 
 
         // GET: Auto/Details/5
-         [AllowAnonymous]
+        [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -72,7 +72,7 @@ namespace SuperDealership.Controllers
             return View(auto);
         }
 
-         [AllowAnonymous]
+        [AllowAnonymous]
         // GET: Auto/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -88,7 +88,7 @@ namespace SuperDealership.Controllers
             return View(auto);
         }
 
-        
+
         // POST: Auto/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -106,7 +106,7 @@ namespace SuperDealership.Controllers
             return View(auto);
         }
 
-         [Authorize(Users = "Admin@Yahoo.com")]
+        [Authorize(Users = "Admin@Yahoo.com")]
         // GET: Auto/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -121,7 +121,7 @@ namespace SuperDealership.Controllers
             }
             return View(auto);
         }
-        
+
         // POST: Auto/Delete/5
         [HttpPost, ActionName("Delete")]
         [Authorize(Users = "Admin@Yahoo.com")]

@@ -12,8 +12,7 @@ namespace SuperDealership.DAL
 {
     public class AutoDBContext : DbContext
     {
-
         public DbSet<Auto> Vehicle { get; set; }
-                public DbSet<User> Users { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 } 

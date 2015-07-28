@@ -15,10 +15,4 @@ namespace SuperDealership.Models
         [Key]
         public int UserID { get; set; }
     }
-
-   
-       // public System.Data.Entity.DbSet<SuperDealership.Models.Auto> Autoes { get; set; }
-
-    
-
 }
