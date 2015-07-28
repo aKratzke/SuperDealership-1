@@ -14,15 +14,6 @@ namespace SuperDealership.DAL
     {
 
         public DbSet<Auto> Vehicle { get; set; }
-
-        public DbSet<User> Users { get; set; }
-
-
-         
-
-
-         
-
-
+                public DbSet<User> Users { get; set; }
     }
 } 

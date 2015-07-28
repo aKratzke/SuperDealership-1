@@ -13,14 +13,23 @@ namespace SuperDealership.Controllers
     public class AutoController : Controller
     {
         private SuperDealership.DAL.AutoDBContext db = new SuperDealership.DAL.AutoDBContext();
-
+        [Authorize]
         // GET: Auto
+
+
+
+
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(db.Vehicle.ToList());
         }
           
+
+
+
         // GET: Auto/Details/5
+         [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,6 +45,10 @@ namespace SuperDealership.Controllers
         }
 
         // GET: Auto/Create
+
+
+
+        [Authorize(Users = "Admin@Yahoo.com")]
         public ActionResult Create()
         {
             return View();
@@ -45,6 +58,7 @@ namespace SuperDealership.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "UserID,Type,Make,Model,Year,MPGLow,MPGHigh,Color,MSRP,Mileage,VIN")] Auto auto)
         {
@@ -58,6 +72,7 @@ namespace SuperDealership.Controllers
             return View(auto);
         }
 
+         [AllowAnonymous]
         // GET: Auto/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -73,10 +88,12 @@ namespace SuperDealership.Controllers
             return View(auto);
         }
 
+        
         // POST: Auto/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Users = "Admin@Yahoo.com")]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "UserID,Type,Make,Model,Year,MPGLow,MPGHigh,Color,MSRP,Mileage,VIN")] Auto auto)
         {
@@ -89,6 +106,7 @@ namespace SuperDealership.Controllers
             return View(auto);
         }
 
+         [Authorize(Users = "Admin@Yahoo.com")]
         // GET: Auto/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -103,9 +121,10 @@ namespace SuperDealership.Controllers
             }
             return View(auto);
         }
-
+        
         // POST: Auto/Delete/5
         [HttpPost, ActionName("Delete")]
+        [Authorize(Users = "Admin@Yahoo.com")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
@@ -115,6 +134,7 @@ namespace SuperDealership.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize(Users = "Admin@Yahoo.com")]
         protected override void Dispose(bool disposing)
         {
             if (disposing)
