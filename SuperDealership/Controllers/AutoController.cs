@@ -339,5 +339,52 @@ namespace SuperDealership.Controllers
             }
             base.Dispose(disposing);
         }
+
+        [AllowAnonymous]
+
+
+        public ActionResult About(string modelCar, string searchString)
+        {
+            var GenreLst = new List<string>();
+
+            var GenreQry = from d in db.Vehicle
+                           orderby d.Make
+                           select d.Make;
+
+            GenreLst.AddRange(GenreQry.Distinct());
+            ViewBag.modelCar = new SelectList(GenreLst);
+
+            var car = from m in db.Vehicle
+                      select m;
+
+
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+
+                car = car.Where(s => s.Model.Contains(searchString));
+            }
+
+
+
+            if (!String.IsNullOrEmpty(modelCar))
+            {
+
+                car = car.Where(x => x.Make == modelCar);
+            }
+
+
+            return View(car);
+        }
+
+
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+
     }
 }
