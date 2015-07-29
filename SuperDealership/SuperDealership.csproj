@@ -190,6 +190,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-SuperDealership-20150727044515.mdf" />
+    <Content Include="App_Data\aspnet-SuperDealership-20150727044515_log.ldf">
+      <DependentUpon>aspnet-SuperDealership-20150727044515.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\Autos.mdf" />
     <Content Include="App_Data\Autos_log.ldf">
       <DependentUpon>Autos.mdf</DependentUpon>
