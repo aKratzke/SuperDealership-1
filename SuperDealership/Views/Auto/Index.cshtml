@@ -4,9 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Inventory</h2>
+<h2>Available Vehicles</h2>
 
 <table class="table">
+   
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Type)
@@ -44,42 +45,38 @@
 
     @foreach (var item in Model)
     {
-        if (item.UserID == 0)
-        {
-
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Type)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Make)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Model)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Year)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MPGLow)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MPGHigh)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Color)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MSRP)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Mileage)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.VIN)
-                </td>
-                <td><img src="@Html.DisplayFor(modelItem => item.CarImg)" /></td>
-            </tr>
-        }
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Make)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MPGLow)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MPGHigh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MSRP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mileage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VIN)
+            </td>
+            <td><img src="@Html.DisplayFor(modelItem => item.CarImg)" /></td>
+        </tr>
     }
 </table>

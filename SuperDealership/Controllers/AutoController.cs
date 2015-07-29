@@ -16,13 +16,48 @@ namespace SuperDealership.Controllers
         [Authorize]
         // GET: Auto
 
-
+        public ActionResult Admin()
+        {
+            return View(db.Vehicle.ToList());
+        }
 
 
         [AllowAnonymous]
         public ActionResult Index()
         {
-            return View(db.Vehicle.ToList());
+            var AutoList = new List<Auto>();
+
+            var autoQry = from a in db.Vehicle
+                          where a.UserID == 1
+                          select a;
+            foreach (var a in autoQry)
+            {
+                AutoList.Add(a);
+            }
+
+            return View(AutoList);
+
+            //
+
+            //foreach (Auto item in db.Vehicle)
+            //{
+            //    if (item.UserID == 0)
+            //    {
+            //        AutoList.Add(item);
+            //    }
+            //}
+
+            //return View (AutoList);
+            //}
+
+            //foreach (var Auto.UserID in db.Vehicle)
+            //{
+            //    if (auto.UserID == 0)
+            //        UserIdList.Add(auto)
+            //} 
+
+            //      
+            //return View(db.Vehicle.ToList());
         }
 
 
