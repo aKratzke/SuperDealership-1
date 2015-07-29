@@ -1431,7 +1431,7 @@ th {
   line-height: 1.428571429;
   vertical-align: top;
   border-top: 1px solid #dddddd;
-  max-width: 300px;
+  max-width: 200px;
 }
 
 .table thead > tr > th {
