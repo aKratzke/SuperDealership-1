@@ -16,8 +16,6 @@ namespace SuperDealership.Migrations
             AutomaticMigrationsEnabled = false;
         }
 
-
-
         protected override void Seed(SuperDealership.DAL.AutoDBContext context)
         {
             string txt = @"C:\Users\Ashley\Documents\Visual Studio 2013\Projects\SuperDealership-1\CarList.txt";

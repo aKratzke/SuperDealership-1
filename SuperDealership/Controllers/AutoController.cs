@@ -60,7 +60,7 @@ namespace SuperDealership.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserID,Type,Make,Model,Year,MPGLow,MPGHigh,Color,MSRP,Mileage,VIN")] Auto auto)
+        public ActionResult Create([Bind(Include = "UserID,Type,Make,Model,Year,MPGLow,MPGHigh,Color,MSRP,Mileage,VIN,CarImg")] Auto auto)
         {
             if (ModelState.IsValid)
             {
@@ -95,7 +95,7 @@ namespace SuperDealership.Controllers
         [HttpPost]
         [Authorize(Users = "Admin@Yahoo.com")]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UserID,Type,Make,Model,Year,MPGLow,MPGHigh,Color,MSRP,Mileage,VIN")] Auto auto)
+        public ActionResult Edit([Bind(Include = "UserID,Type,Make,Model,Year,MPGLow,MPGHigh,Color,MSRP,Mileage,VIN,CarImg")] Auto auto)
         {
             if (ModelState.IsValid)
             {
