@@ -13,7 +13,7 @@ namespace SuperDealership.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(SuperDealership.DAL.AutoDBContext context)

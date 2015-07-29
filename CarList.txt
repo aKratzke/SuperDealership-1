@@ -3,6 +3,6 @@
 0,745098730,Truck,Ford,SVT Raptor,2014,11,16,White,54995,20372,http://static.cargurus.com/images/forsale/2015/06/08/04/38/2014_ford_f-150-pic-6616895192877824558-1024x768.jpeg
 0,983745983,Coupe,DeLorean,DMC-12,1981,20,39,Silver,12000,19843,http://assets.hemmings.com/uimage/5814726-770-0@2X.jpg?rev=1
 0,765027820,Sedan,Pontiac,G6 GXP,2009,17,26,Black,18000,92000,https://d19dnnpcapsxxm.cloudfront.net/3/1000887/375690/3578836.jpg
-0,958876642,Sedan,Honda,Accord,2013,27,36,Metallic Silver,https://s3.amazonaws.com/cimg.carsforsale.com/705703/1017E371-AEE3-48BC-B8A9-78CE2CF6E460_1.jpg
+0,958876642,Sedan,Honda,Accord,2013,27,36,Metallic Silver,14000,89000,https://s3.amazonaws.com/cimg.carsforsale.com/705703/1017E371-AEE3-48BC-B8A9-78CE2CF6E460_1.jpg
 0,749873050,Truck,Ford,F-150,2010,11,16,Black,17995,97516,https://s3.amazonaws.com/cimg.carsforsale.com/354684/68FA36CA-1800-4063-A1D9-45231B40AF36_1.jpg
 0,374599883,SUV,GMC,Acadia SLT-2,2007,16,24,Silver,12000,135972,https://d19dnnpcapsxxm.cloudfront.net/3/586338/407640/4627020.jpg

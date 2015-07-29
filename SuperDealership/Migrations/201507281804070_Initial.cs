@@ -34,6 +34,7 @@ namespace SuperDealership.Migrations
                         Mileage = c.Double(nullable: false),
                         CarImg = c.String(),
                         VIN = c.Int(nullable: false),
+                        IsOwned = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.UserID);
             

@@ -139,6 +139,7 @@ namespace SuperDealership.Controllers
             //ViewBag.autoVIN = new SelectList(VINLst);
 
             var autos = from d in db.Vehicle
+                        where d.IsOwned == false
                         select d;
 
             if (!String.IsNullOrEmpty(autoType))
