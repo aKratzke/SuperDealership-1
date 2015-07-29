@@ -89,8 +89,11 @@
         <dd>
             @Html.DisplayFor(model => model.VIN)
         </dd>
-
+        
     </dl>
+    <img style="float:right;" src="@Html.DisplayFor(model => model.CarImg)" />
+
+    
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.UserID }) |
