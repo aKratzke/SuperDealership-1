@@ -12,13 +12,13 @@
         Make: @Html.DropDownList("autoMake", "All")
         Model: @Html.DropDownList("autoModel", "All")
         Year: @Html.DropDownList("autoYear", "All")
-        MPGLow: @Html.DropDownList("autoMPGLow", "All")
+        @*MPGLow: @Html.DropDownList("autoMPGLow", "All")
         MPGHigh: @Html.DropDownList("autoMPGHigh", "All")
         Color: @Html.DropDownList("autoColor", "All")
         MSRP: @Html.DropDownList("autoMSRP", "All")
         Mileage: @Html.DropDownList("autoMileage", "All")
-        VIN: @Html.DropDownList("autoVIN", "All")
-        <br />
+        VIN: @Html.DropDownList("autoVIN", "All")*@
+        
         <input type="submit" value="Filter" />
     </p>
 }
@@ -94,6 +94,7 @@
                 @Html.DisplayFor(modelItem => item.VIN)
             </td>
             <td><img src="@Html.DisplayFor(modelItem => item.CarImg)" /></td>
+            <td>@Html.ActionLink("Details", "Details", new {id = item.UserID})</td>
         </tr>
     }
 </table>
