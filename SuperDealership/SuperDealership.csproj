@@ -324,6 +324,7 @@
     <Content Include="Views\Auto\Delete.cshtml" />
     <Content Include="Views\Auto\Details.cshtml" />
     <Content Include="Views\Auto\Edit.cshtml" />
+    <Content Include="Views\Auto\Admin.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
