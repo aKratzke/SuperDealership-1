@@ -5,6 +5,23 @@
 }
 
 <h2>Available Vehicles</h2>
+@using (Html.BeginForm("Index", "Auto", FormMethod.Get))
+{
+    <p>
+        Type: @Html.DropDownList("autoType", "All")
+        Make: @Html.DropDownList("autoMake", "All")
+        Model: @Html.DropDownList("autoModel", "All")
+        Year: @Html.DropDownList("autoYear", "All")
+        MPGLow: @Html.DropDownList("autoMPGLow", "All")
+        MPGHigh: @Html.DropDownList("autoMPGHigh", "All")
+        Color: @Html.DropDownList("autoColor", "All")
+        MSRP: @Html.DropDownList("autoMSRP", "All")
+        Mileage: @Html.DropDownList("autoMileage", "All")
+        VIN: @Html.DropDownList("autoVIN", "All")
+        <br />
+        <input type="submit" value="Filter" />
+    </p>
+}
 
 <table class="table">
    
