@@ -1,0 +1,88 @@
+﻿@model IEnumerable<SuperDealership.Models.Auto>
+
+@{
+    ViewBag.Title = "About";
+}
+<h2>Inventory</h2>
+
+<p>Enter search criteria</p>
+
+@using (Html.BeginForm("About", "Auto", FormMethod.Get))
+{
+    <p>
+        Model: @Html.DropDownList("modelCar", "All")
+        Search by Make: @Html.TextBox("SearchString") <br /><br />
+        <input type="submit" value="Lookup" />
+    </p>
+
+
+
+}
+
+
+
+<table class="table">
+    <tr>
+        <th>
+
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Make)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Year)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MSRP)
+        </th>
+
+
+        <th></th>
+        <th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td><img src="@Html.DisplayFor(modelItem => item.CarImg)" /></td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Make)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MSRP)
+            </td>
+
+
+
+            <td>
+
+
+                @Html.ActionLink("Details", "Details", new { id = item.UserID })
+
+            </td>
+        </tr>
+    }
+</table>
