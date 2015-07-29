@@ -9,8 +9,8 @@
 <div>
     <h4>Auto</h4>
     <hr />
-    <img style="float:right;" src="@Html.DisplayFor(model => model.CarImg)" />
-    <dl style="float:left;"class="dl-horizontal">
+    <img style="float:right;width:50%;" src="@Html.DisplayFor(model => model.CarImg)" />
+    <dl style="float:left; "class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Type)
         </dt>
@@ -95,7 +95,7 @@
 
 
 </div>
-<p>
+<p style="clear:both;">
     @*@Html.ActionLink("Edit", "Edit", new { id = Model.UserID })*@
     @Html.ActionLink("Back to List", "Index")
 </p>
