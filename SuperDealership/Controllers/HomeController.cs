@@ -22,7 +22,7 @@ namespace SuperDealership.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "We're your contact for great used cars.";
 
             return View();
         }

@@ -1,10 +1,12 @@
 ﻿body {
+    background-color:#bca5d2;
     padding-top: 50px;
     padding-bottom: 20px;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
+    background-color:#ffffff;
     padding-left: 15px;
     padding-right: 15px;
 }
