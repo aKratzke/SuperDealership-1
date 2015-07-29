@@ -353,6 +353,7 @@ a:focus {
 
 img {
   vertical-align: middle;
+  max-width:100%;
 }
 
 .img-responsive {
@@ -1418,7 +1419,9 @@ th {
   margin-bottom: 20px;
 }
 
-.table thead > tr > th,
+.table thead > tr > th{
+    text-align:center;
+}
 .table tbody > tr > th,
 .table tfoot > tr > th,
 .table thead > tr > td,
@@ -1428,6 +1431,7 @@ th {
   line-height: 1.428571429;
   vertical-align: top;
   border-top: 1px solid #dddddd;
+  max-width: 300px;
 }
 
 .table thead > tr > th {
