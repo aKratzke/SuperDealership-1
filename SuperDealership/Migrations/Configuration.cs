@@ -46,8 +46,7 @@ namespace SuperDealership.Migrations
                 string color = carArray[8];
                 string msrp = carArray[9];
                 string mileage = carArray[10];
-                string img = carArray[11]; 
-
+                string img = carArray[11];
                  
                 context.Vehicle.AddOrUpdate(i => i.VIN,
                     new Auto
@@ -62,7 +61,8 @@ namespace SuperDealership.Migrations
                         Color = color,
                         MSRP = Double.Parse(msrp),
                         Mileage = Double.Parse(mileage),
-                        CarImg = img
+                        CarImg = img,
+                        IsOwned = false
                     }
                 );
             }

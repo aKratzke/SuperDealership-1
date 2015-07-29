@@ -23,6 +23,7 @@ namespace SuperDealership.Models
         public double Mileage { get; set; }
         public string CarImg { get; set; }
         public int VIN { get; set; }
+        public bool IsOwned { get; set; }
     }
 
 
