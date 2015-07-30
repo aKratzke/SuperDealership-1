@@ -26,6 +26,8 @@ namespace SuperDealership.Models
         public bool IsOwned { get; set; }
     }
 
+}
+
 
        
-}  
+ 

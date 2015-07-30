@@ -257,7 +257,7 @@ namespace SuperDealership.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserID,Type,Make,Model,Year,MPGLow,MPGHigh,Color,MSRP,Mileage,VIN,CarImg")] Auto auto)
+        public ActionResult Create([Bind(Include = "UserID,Type,Make,Model,Year,MPGLow,MPGHigh,Color,MSRP,Mileage,VIN,CarImg,IsOwned")] Auto auto)
         {
             if (ModelState.IsValid)
             {
@@ -292,7 +292,7 @@ namespace SuperDealership.Controllers
         [HttpPost]
         [Authorize(Users = "Admin@Yahoo.com")]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UserID,Type,Make,Model,Year,MPGLow,MPGHigh,Color,MSRP,Mileage,VIN,CarImg")] Auto auto)
+        public ActionResult Edit([Bind(Include = "UserID,Type,Make,Model,Year,MPGLow,MPGHigh,Color,MSRP,Mileage,VIN,CarImg,IsOwned")] Auto auto)
         {
             if (ModelState.IsValid)
             {
@@ -363,7 +363,7 @@ namespace SuperDealership.Controllers
             if (!String.IsNullOrEmpty(searchString))
             {
 
-                car = car.Where(s => s.Model.Contains(searchString));
+                car = car.Where(s => s.Model.Contains(searchString) && s.IsOwned == false);
             }
 
 
@@ -371,9 +371,10 @@ namespace SuperDealership.Controllers
             if (!String.IsNullOrEmpty(modelCar))
             {
 
-                car = car.Where(x => x.Make == modelCar);
+                car = car.Where(x => x.Make == modelCar && x.IsOwned == false);
             }
 
+            ViewBag.count = car.Count();
 
             return View(car);
         }

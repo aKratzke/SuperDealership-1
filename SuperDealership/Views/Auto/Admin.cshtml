@@ -14,7 +14,7 @@
     <tr>
 
         <th>
-            @Html.DisplayNameFor(model => model.UserID)
+            @Html.DisplayNameFor(model => model.IsOwned)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.UserID)
@@ -57,6 +57,10 @@
     {
 
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsOwned)
+            </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.UserID)
             </td>
